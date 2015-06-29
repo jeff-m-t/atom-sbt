@@ -9,3 +9,5 @@
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 'atom-workspace':
   'ctrl-alt-o': 'atom-sbt:toggle'
+  'ctrl-alt-i': 'atom-sbt:clearSbtOutput'
+  'ctrl-alt-l': 'atom-sbt:runCommand'

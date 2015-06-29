@@ -1,3 +1,5 @@
+$ = require 'jquery'
+
 module.exports =
 class AtomSbtView
   constructor: (serializedState) ->
@@ -5,11 +7,7 @@ class AtomSbtView
     @element = document.createElement('div')
     @element.classList.add('atom-sbt')
 
-    # Create message element
-    message = document.createElement('div')
-    message.textContent = "The AtomSbt package is Alive! It's ALIVE!"
-    message.classList.add('message')
-    @element.appendChild(message)
+    @clear()
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
@@ -20,3 +18,19 @@ class AtomSbtView
 
   getElement: ->
     @element
+
+  clear: ->
+    # Clear the current logs
+    $(@element).empty()
+
+    # Create line
+    message = document.createElement('div')
+    message.textContent = "SBT Output:"
+    message.classList.add('message')
+    @element.appendChild(message)
+
+  addRow: (row) ->
+    newElement = document.createElement('div')
+    newElement.classList.add('message')
+    newElement.textContent = row
+    @element.appendChild(newElement)

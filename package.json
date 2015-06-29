@@ -6,7 +6,7 @@
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "atom-sbt:toggle"
+    "atom-workspace": "atom-sbt:runCommand"
   },
   "repository": "https://github.com/jeff-m-t/atom-sbt",
   "license": "MIT",
@@ -14,5 +14,10 @@
     "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
+    "emissary": "1.x",
+    "atom-space-pen-views": "^2.0.3",
+    "jquery": "^2",
+    "atom-message-panel": "~1.2.4",
+    "lodash": "~3.9.3"
   }
 }
